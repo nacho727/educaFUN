@@ -1,0 +1,361 @@
+body{
+
+    margin:0;
+    padding:0;
+
+    font-family:Arial;
+
+    overflow-x:hidden;
+
+    background-image:url("../img/fondo-gumball.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    animation:moverFondo 12s infinite alternate ease-in-out;
+}
+
+
+/* FONDO */
+
+@keyframes moverFondo{
+
+    0%{
+        background-position:center top;
+    }
+
+    100%{
+        background-position:center bottom;
+    }
+}
+
+
+/* OVERLAY */
+
+.overlay{
+
+    min-height:100vh;
+
+    background:rgba(255,255,255,0.65);
+
+    padding:20px;
+}
+
+
+/* PERFIL */
+
+.perfil{
+
+    position:absolute;
+
+    top:20px;
+
+    left:20px;
+
+    width:220px;
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:20px;
+
+    text-align:center;
+
+    box-shadow:0 0 15px rgba(0,0,0,0.2);
+}
+
+.perfil h2{
+
+    font-size:32px;
+
+    color:#333;
+}
+
+.avatarUsuario{
+
+    width:150px;
+    height:150px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:6px solid #4da6ff;
+
+    animation:flotar 2s infinite;
+
+    box-shadow:
+    0 0 15px white,
+    0 0 25px #4da6ff;
+}
+
+
+/* CONTENEDOR */
+
+.contenedor{
+
+    text-align:center;
+
+    padding-top:30px;
+}
+
+
+/* TITULO */
+
+.titulo{
+
+    font-size:60px;
+
+    color:#ff4d4d;
+
+    text-shadow:3px 3px white;
+}
+
+
+/* ZONA JUEGO */
+
+.zonaJuego{
+
+    background:white;
+
+    width:85%;
+
+    max-width:1000px;
+
+    margin:auto;
+
+    border-radius:30px;
+
+    padding:30px;
+
+    box-shadow:0 0 15px rgba(0,0,0,0.2);
+}
+
+
+/* TITULOS */
+
+.zonaJuego h2{
+
+    font-size:40px;
+
+    color:#444;
+}
+
+
+/* VOCALES */
+
+.vocales{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin-top:30px;
+}
+
+.vocal{
+
+    width:100px;
+    height:100px;
+
+    border:none;
+
+    border-radius:25px;
+
+    font-size:50px;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+    transition:0.3s;
+
+    animation:vibrar 1s infinite alternate;
+}
+
+.vocal:hover{
+
+    transform:scale(1.1);
+}
+
+
+/* COLORES */
+
+.a{
+    background:#ff4d4d;
+}
+
+.e{
+    background:#ff9900;
+}
+
+.i{
+    background:#33cc33;
+}
+
+.o{
+    background:#3399ff;
+}
+
+.u{
+    background:#9933ff;
+}
+
+
+/* IMAGENES */
+
+img{
+
+    width:160px;
+    height:160px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    background:white;
+
+    padding:10px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    animation:
+    flotar 3s infinite ease-in-out,
+    vibrar 1s infinite alternate;
+
+    box-shadow:
+    0 0 15px white,
+    0 0 25px #4da6ff;
+}
+
+img:hover{
+
+    transform:scale(1.08);
+}
+
+
+/* ZONA ARRASTRAR */
+
+.recuadros{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin-top:40px;
+}
+
+.caja{
+
+    width:150px;
+
+    min-height:220px;
+
+    background:#f5f5f5;
+
+    border-radius:25px;
+
+    padding:15px;
+
+    box-shadow:0 0 10px rgba(0,0,0,0.15);
+}
+
+.caja h1{
+
+    font-size:55px;
+}
+
+
+/* BOTONES */
+
+.botones{
+
+    margin-top:40px;
+}
+
+button{
+
+    padding:18px 35px;
+
+    border:none;
+
+    border-radius:20px;
+
+    background:#ffcc00;
+
+    color:#333;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    margin:10px;
+
+    font-weight:bold;
+
+    transition:0.3s;
+}
+
+button:hover{
+
+    transform:scale(1.05);
+}
+
+
+/* RESULTADO */
+
+.resultado{
+
+    font-size:45px;
+
+    margin-top:30px;
+}
+
+
+/* ANIMACIONES */
+
+@keyframes flotar{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+@keyframes vibrar{
+
+    0%{
+        transform:rotate(0deg);
+    }
+
+    50%{
+        transform:rotate(2deg);
+    }
+
+    100%{
+        transform:rotate(-2deg);
+    }
+}

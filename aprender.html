@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+
+<title>Las Vocales</title>
+
+<link rel="stylesheet" href="css/aprender.css">
+
+<link rel="icon" href="img/icono.png">
+
+</head>
+
+<body>
+
+<div class="overlay">
+
+    <!-- PERFIL -->
+    <div class="perfil">
+
+        <h2 id="nombreUsuario"></h2>
+
+        <img id="avatarUsuario" class="avatarUsuario">
+
+    </div>
+
+    <!-- CONTENIDO CENTRAL -->
+    <div class="contenedor-principal">
+
+        <!-- CAJA CENTRAL -->
+        <div class="zona-centro">
+
+            <!-- TITULO -->
+            <h1 class="titulo">
+            LAS VOCALES
+            </h1>
+
+            <!-- VOCALES -->
+            <div class="vocales">
+
+                <button class="vocal a"
+                onclick="mostrarVocal('A')">
+                A
+                </button>
+
+                <button class="vocal e"
+                onclick="mostrarVocal('E')">
+                E
+                </button>
+
+                <button class="vocal i"
+                onclick="mostrarVocal('I')">
+                I
+                </button>
+
+                <button class="vocal o"
+                onclick="mostrarVocal('O')">
+                O
+                </button>
+
+                <button class="vocal u"
+                onclick="mostrarVocal('U')">
+                U
+                </button>
+
+            </div>
+
+            <!-- CONTENIDO -->
+            <div id="contenido" class="contenido">
+
+                <p class="mensaje">
+                Presiona una vocal para aprender
+                </p>
+
+            </div>
+
+            <!-- BOTON -->
+            <button class="final"
+            onclick="irEvaluacion()">
+
+            Veamos que aprendiste
+
+            </button>
+
+        </div>
+
+        <!-- GUMBALL -->
+        <div class="zona-gumball">
+
+            <img src="img/gumball.png"
+            class="gumball">
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/aprender.js"></script>
+
+</body>
+</html>

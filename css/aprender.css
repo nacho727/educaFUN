@@ -1,0 +1,325 @@
+body{
+
+    margin:0;
+    padding:0;
+
+    font-family:Arial;
+
+    overflow-x:hidden;
+
+    background-image:url("../img/fondo-gumball.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    animation:moverFondo 12s infinite alternate ease-in-out;
+}
+
+
+/* MOVIMIENTO FONDO */
+@keyframes moverFondo{
+
+    0%{
+        background-position:center top;
+    }
+
+    100%{
+        background-position:center bottom;
+    }
+}
+
+
+/* CAPA */
+.overlay{
+
+    min-height:100vh;
+
+    background:rgba(255,255,255,0.65);
+
+    padding:20px;
+
+    position:relative;
+}
+
+
+/* PERFIL */
+.perfil{
+
+    position:absolute;
+
+    top:20px;
+
+    left:20px;
+
+    width:240px;
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:25px;
+
+    text-align:center;
+
+    box-shadow:0 0 15px rgba(0,0,0,0.2);
+}
+
+.perfil h2{
+
+    font-size:35px;
+
+    color:#333;
+
+    margin-bottom:20px;
+
+    word-break:break-word;
+}
+
+.avatarUsuario{
+
+    width:150px;
+    height:150px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:5px solid #4da6ff;
+
+    background:#fff;
+}
+
+
+/* CONTENEDOR */
+.contenedor-principal{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:50px;
+
+    flex-wrap:wrap;
+
+    padding-top:50px;
+}
+
+
+/* CAJA CENTRAL */
+.zona-centro{
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:30px;
+
+    width:700px;
+
+    text-align:center;
+
+    box-shadow:0 0 15px rgba(0,0,0,0.2);
+}
+
+
+/* TITULO */
+.titulo{
+
+    font-size:60px;
+
+    color:#ff4d4d;
+
+    text-shadow:3px 3px white;
+
+    margin-bottom:30px;
+}
+
+
+/* GUMBALL */
+.zona-gumball{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+}
+
+.gumball{
+
+    width:260px;
+
+    animation:flotar 2s infinite ease-in-out;
+}
+
+
+/* ANIMACION GUMBALL */
+@keyframes flotar{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+
+/* VOCALES */
+.vocales{
+
+    margin-bottom:40px;
+}
+
+.vocal{
+
+    width:100px;
+    height:100px;
+
+    border:none;
+
+    border-radius:20px;
+
+    margin:10px;
+
+    font-size:50px;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    font-weight:bold;
+}
+
+.vocal:hover{
+
+    transform:scale(1.1);
+}
+
+.a{
+    background:#ff4d4d;
+}
+
+.e{
+    background:#ff9900;
+}
+
+.i{
+    background:#33cc33;
+}
+
+.o{
+    background:#3399ff;
+}
+
+.u{
+    background:#9933ff;
+}
+
+
+/* CONTENIDO */
+.contenido{
+
+    min-height:250px;
+}
+
+.mensaje{
+
+    font-size:30px;
+
+    color:#444;
+}
+
+
+/* OBJETOS */
+.objetos{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+}
+
+.tarjeta{
+
+    background:#f8f8f8;
+
+    width:160px;
+
+    border-radius:20px;
+
+    padding:15px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    box-shadow:0 0 10px rgba(0,0,0,0.15);
+}
+
+.tarjeta:hover{
+
+    transform:scale(1.08);
+}
+
+.tarjeta img{
+
+    width:100px;
+    height:100px;
+
+    object-fit:contain;
+}
+
+.tarjeta p{
+
+    font-size:24px;
+
+    font-weight:bold;
+}
+
+
+/* BOTON */
+.final{
+
+    margin-top:30px;
+
+    padding:18px 35px;
+
+    border:none;
+
+    border-radius:20px;
+
+    background:#ffcc00;
+
+    color:#333;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    font-weight:bold;
+}
+
+.final:hover{
+
+    transform:scale(1.05);
+
+    background:#ffd633;
+}

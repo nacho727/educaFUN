@@ -1,0 +1,55 @@
+function juego2(){
+
+hablar("Arrastra la vocal correcta");
+
+document.getElementById("juego").innerHTML = `
+
+<div class="zonaJuego">
+
+<h2>
+Arrastra la vocal correcta
+</h2>
+
+<div class="vocalesDesordenadas">
+
+<div draggable="true"
+ondragstart="arrastrar(event)"
+id="A"
+class="letra"
+style="background:#ff4d4d">
+A
+</div>
+
+<div draggable="true"
+ondragstart="arrastrar(event)"
+id="U"
+class="letra"
+style="background:#9933ff">
+U
+</div>
+
+<div draggable="true"
+ondragstart="arrastrar(event)"
+id="O"
+class="letra"
+style="background:#3399ff">
+O
+</div>
+
+</div>
+
+<div class="caja"
+ondrop="soltar(event)"
+ondragover="permitir(event)">
+
+<img src="img/uvas.png">
+
+<h3>
+Uvas
+</h3>
+
+</div>
+
+</div>
+`;
+}
