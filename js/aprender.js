@@ -131,8 +131,10 @@ function mostrarVocal(vocal){
     let contenido = `
 
     <h2 style="
-    font-size:45px;
+    font-size:50px;
     color:#444;
+    margin-bottom:30px;
+    text-shadow:2px 2px white;
     ">
     Vocal ${vocal}
     </h2>
@@ -145,7 +147,10 @@ function mostrarVocal(vocal){
         contenido += `
 
         <div class="tarjeta"
-        onclick="hablar('${objeto.nombre}')">
+        onclick="
+        animarTarjeta(this);
+        hablar('${objeto.nombre}')
+        ">
 
             <img src="${objeto.imagen}">
 
@@ -162,6 +167,33 @@ function mostrarVocal(vocal){
     contenido;
 }
 
+// ANIMACION CLICK
+function animarTarjeta(elemento){
+
+    elemento.animate([
+
+    {
+        transform:"scale(1)"
+    },
+
+    {
+        transform:"scale(0.9)"
+    },
+
+    {
+        transform:"scale(1.08)"
+    },
+
+    {
+        transform:"scale(1)"
+    }
+
+    ],{
+
+    duration:300
+
+    });
+}
 
 function irEvaluacion(){
 
@@ -169,7 +201,7 @@ function irEvaluacion(){
 
     setTimeout(()=>{
 
-        window.location.href = "evaluacion.html";
+        window.location.href = "juego1.html";
 
-    },2000);
+    },1500);
 }

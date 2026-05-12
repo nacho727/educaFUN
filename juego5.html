@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Juego 5</title>
+
+<link rel="stylesheet" href="css/juego.css">
+
+<link rel="icon" href="img/icono.png">
+
+</head>
+
+<body onload="iniciarJuego()">
+
+<div class="overlay">
+
+<div class="contenedor">
+
+<h1 class="titulo">
+JUEGO 5
+</h1>
+
+<div class="zonaJuego">
+
+<div class="subtitulo">
+
+<h2>
+Encuentra la pareja correcta
+</h2>
+
+<button class="audio"
+onclick="hablarTitulo()">
+🔊
+</button>
+
+</div>
+
+<div class="vocales">
+
+<button class="vocal e"
+onclick="memoria(this,'E')">
+E
+</button>
+
+<img src="img/arbol.png"
+onclick="memoria(this,'A'); hablar('Árbol')">
+
+<button class="vocal a"
+onclick="memoria(this,'A')">
+A
+</button>
+
+<img src="img/elefante.png"
+onclick="memoria(this,'E'); hablar('Elefante')">
+
+<button class="vocal o"
+onclick="memoria(this,'O')">
+O
+</button>
+
+<img src="img/oso.png"
+onclick="memoria(this,'O'); hablar('Oso')">
+
+</div>
+<div class="botones">
+
+<button onclick="verificar()">
+Verificar
+</button>
+
+<button onclick="location.reload()">
+Repetir
+</button>
+
+</div>
+
+<div id="resultado"></div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="js/juego5.js"></script>
+
+</body>
+</html>

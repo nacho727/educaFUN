@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Juego 3</title>
+
+<link rel="stylesheet" href="css/juego.css">
+<link rel="icon" href="img/icono.png">
+</head>
+
+<body onload="iniciarJuego()">
+
+<div class="overlay">
+
+<div class="contenedor">
+
+<h1 class="titulo">
+ESCUCHA Y ELIGE LA VOCAL
+</h1>
+
+<div class="zonaJuego">
+
+<div class="subtitulo">
+
+<h2>
+Escucha la vocal y selecciona la correcta
+</h2>
+
+<button class="audio"
+onclick="hablarTitulo()">
+🔊
+</button>
+
+</div>
+
+<button onclick="hablar('E')">
+🔊 Escuchar
+</button>
+
+<div class="vocales">
+
+<button class="vocal i"
+onclick="seleccionar(this,false,'I')">
+I
+</button>
+
+<button class="vocal a"
+onclick="seleccionar(this,false,'A')">
+A
+</button>
+
+<button class="vocal e"
+onclick="seleccionar(this,true,'E')">
+E
+</button>
+
+<button class="vocal u"
+onclick="seleccionar(this,false,'U')">
+U
+</button>
+
+</div>
+
+<div class="botones">
+
+<button onclick="verificar()">
+Verificar
+</button>
+
+<button onclick="location.reload()">
+Repetir
+</button>
+
+</div>
+
+<div id="resultado"></div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="js/juego3.js"></script>
+
+</body>
+</html>

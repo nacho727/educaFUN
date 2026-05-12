@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Juego 6</title>
+
+<link rel="stylesheet" href="css/juego.css">
+
+<link rel="icon" href="img/icono.png">
+
+</head>
+
+<body onload="iniciarJuego()">
+
+<div class="overlay">
+
+<div class="contenedor">
+
+<h1 class="titulo">
+JUEGO 6
+</h1>
+
+<div class="zonaJuego">
+
+<div class="subtitulo">
+
+<h2>
+Revienta solamente las vocales
+</h2>
+
+<button class="audio"
+onclick="hablarTitulo()">
+🔊
+</button>
+
+</div>
+
+<div class="vocales">
+
+<button class="vocal"
+style="background:black"
+onclick="reventar(this,false,'B')">
+B
+</button>
+
+<button class="vocal e"
+onclick="reventar(this,true,'E')">
+E
+</button>
+
+<button class="vocal"
+style="background:black"
+onclick="reventar(this,false,'T')">
+T
+</button>
+
+<button class="vocal a"
+onclick="reventar(this,true,'A')">
+A
+</button>
+
+<button class="vocal i"
+onclick="reventar(this,true,'I')">
+I
+</button>
+
+<button class="vocal"
+style="background:black"
+onclick="reventar(this,false,'M')">
+M
+</button>
+
+</div>
+
+<div class="botones">
+
+<button onclick="verificar()">
+Verificar
+</button>
+
+<button onclick="location.reload()">
+Repetir
+</button>
+
+</div>
+
+<div id="resultado"></div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="js/juego6.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Juego 1</title>
+
+<link rel="stylesheet" href="css/juego.css">
+
+</head>
+
+<body onload="iniciarJuego()">
+
+<div class="overlay">
+
+<div class="contenedor">
+
+<h1 class="titulo">
+JUEGO 1
+</h1>
+
+<div class="zonaJuego">
+
+<div class="subtitulo">
+
+<h2 id="textoTitulo">
+Arrastra las vocales hacia la imagen correcta
+</h2>
+
+<button class="audio"
+onclick="hablarTitulo()">
+🔊
+</button>
+
+</div>
+
+<!-- VOCALES DESORDENADAS -->
+<div class="vocales">
+
+<div draggable="true"
+ondragstart="arrastrar(event)"
+id="O"
+class="vocal o"
+onclick="hablar('O')">
+O
+</div>
+
+<div draggable="true"
+ondragstart="arrastrar(event)"
+id="A"
+class="vocal a"
+onclick="hablar('A')">
+A
+</div>
+
+<div draggable="true"
+ondragstart="arrastrar(event)"
+id="U"
+class="vocal u"
+onclick="hablar('U')">
+U
+</div>
+
+<div draggable="true"
+ondragstart="arrastrar(event)"
+id="E"
+class="vocal e"
+onclick="hablar('E')">
+E
+</div>
+
+<div draggable="true"
+ondragstart="arrastrar(event)"
+id="I"
+class="vocal i"
+onclick="hablar('I')">
+I
+</div>
+
+</div>
+
+</div>
+
+<div class="recuadros">
+
+<div class="caja"
+ondrop="soltar(event,'A')"
+ondragover="permitir(event)">
+
+<img src="img/arbol.png"
+onclick="hablar('Árbol')">
+
+<h1 id="cajaA"></h1>
+
+</div>
+
+<div class="caja"
+ondrop="soltar(event,'E')"
+ondragover="permitir(event)">
+
+<img src="img/elefante.png"
+onclick="hablar('Elefante')">
+
+<h1 id="cajaE"></h1>
+
+</div>
+
+<div class="caja"
+ondrop="soltar(event,'I')"
+ondragover="permitir(event)">
+
+<img src="img/isla.png"
+onclick="hablar('Isla')">
+
+<h1 id="cajaI"></h1>
+
+</div>
+
+<div class="caja"
+ondrop="soltar(event,'O')"
+ondragover="permitir(event)">
+
+<img src="img/oso.png"
+onclick="hablar('Oso')">
+
+<h1 id="cajaO"></h1>
+
+</div>
+
+<div class="caja"
+ondrop="soltar(event,'U')"
+ondragover="permitir(event)">
+
+<img src="img/uvas.png"
+onclick="hablar('Uvas')">
+
+<h1 id="cajaU"></h1>
+
+</div>
+
+</div>
+
+<div class="botones">
+
+<button onclick="verificar()">
+Verificar
+</button>
+
+<button onclick="location.reload()">
+Repetir
+</button>
+
+</div>
+
+<div id="resultado"></div>
+
+</div>
+
+</div>
+
+<script src="js/juego1.js"></script>
+
+</body>
+</html>

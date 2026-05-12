@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Juego 7</title>
+
+<link rel="stylesheet" href="css/juego.css">
+
+<link rel="icon" href="img/icono.png">
+
+</head>
+
+<body onload="iniciarJuego()">
+
+<div class="overlay">
+
+<div class="contenedor">
+
+<h1 class="titulo">
+JUEGO 7
+</h1>
+
+<div class="zonaJuego">
+
+<div class="subtitulo">
+
+<h2>
+Selecciona la imagen que empieza con U
+</h2>
+
+<button class="audio"
+onclick="hablarTitulo()">
+🔊
+</button>
+
+</div>
+
+<div class="vocales">
+
+<img src="img/arbol.png"
+onclick="seleccionar(false,'Árbol',this)">
+
+<img src="img/uvas.png"
+onclick="seleccionar(true,'Uvas',this)">
+
+<img src="img/oso.png"
+onclick="seleccionar(false,'Oso',this)">
+
+<img src="img/elefante.png"
+onclick="seleccionar(false,'Elefante',this)">
+
+</div>
+
+<div class="botones">
+
+<button onclick="verificar()">
+Verificar
+</button>
+
+<button onclick="location.reload()">
+Repetir
+</button>
+
+</div>
+
+<div id="resultado"></div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="js/juego7.js"></script>
+
+</body>
+</html>

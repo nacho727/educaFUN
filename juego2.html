@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Juego 2</title>
+
+<link rel="stylesheet" href="css/juego.css">
+
+</head>
+
+<body onload="iniciarJuego()">
+
+<div class="overlay">
+
+<div class="contenedor">
+
+<h1 class="titulo">
+SELECCIONA LAS IMÁGENES CON A
+</h1>
+
+<div class="zonaJuego">
+
+<div class="subtitulo">
+
+<h2>
+Selecciona solamente las imágenes que comienzan con A
+</h2>
+
+<button class="audio"
+onclick="hablarTitulo()">
+🔊
+</button>
+
+</div>
+
+<div class="vocales">
+
+<img src="img/oso.png"
+onclick="seleccionar(this,false,'Oso')">
+
+<img src="img/avion.png"
+onclick="seleccionar(this,true,'Avión')">
+
+<img src="img/uvas.png"
+onclick="seleccionar(this,false,'Uvas')">
+
+<img src="img/arbol.png"
+onclick="seleccionar(this,true,'Árbol')">
+
+<img src="img/elefante.png"
+onclick="seleccionar(this,false,'Elefante')">
+
+</div>
+
+<div class="botones">
+
+<button onclick="verificar()">
+Verificar
+</button>
+
+<button onclick="location.reload()">
+Repetir
+</button>
+
+</div>
+
+<div id="resultado"></div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="js/juego2.js"></script>
+
+</body>
+</html>

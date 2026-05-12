@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Juego 4</title>
+
+<link rel="stylesheet" href="css/juego.css">
+<link rel="icon" href="img/icono.png">
+</head>
+
+<body onload="iniciarJuego()">
+
+<div class="overlay">
+
+<div class="contenedor">
+
+<h1 class="titulo">
+COMPLETA LA PALABRA
+</h1>
+
+<div class="zonaJuego">
+
+<div class="subtitulo">
+
+<h2>
+Escoge la vocal correcta para completar
+</h2>
+
+<button class="audio"
+onclick="hablarTitulo()">
+🔊
+</button>
+
+</div>
+
+<img src="img/oso.png"
+onclick="hablar('Oso')">
+
+<div class="palabra"
+id="palabra">
+_ SO
+</div>
+
+<div class="vocales">
+
+<button class="vocal u"
+onclick="seleccionar('U')">
+U
+</button>
+
+<button class="vocal o"
+onclick="seleccionar('O')">
+O
+</button>
+
+<button class="vocal a"
+onclick="seleccionar('A')">
+A
+</button>
+
+<button class="vocal i"
+onclick="seleccionar('I')">
+I
+</button>
+
+</div>
+
+<div class="botones">
+
+<button onclick="verificar()">
+Verificar
+</button>
+
+<button onclick="location.reload()">
+Repetir
+</button>
+
+</div>
+
+<div id="resultado"></div>
+
+</div>
+
+</div>
+
+<script src="js/juego4.js"></script>
+
+</body>
+</html>
