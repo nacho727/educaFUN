@@ -24,7 +24,6 @@ body{
     animation:moverFondo 12s infinite alternate ease-in-out;
 }
 
-
 /* =========================
    FONDO ANIMADO
 ========================= */
@@ -57,6 +56,8 @@ body{
 
     padding:30px;
 
+    position:relative;
+
     background:rgba(255,255,255,0.18);
 
     backdrop-filter:blur(5px);
@@ -78,6 +79,55 @@ body{
     justify-content:center;
 
     align-items:center;
+}
+
+.perfil{
+
+    position:absolute;
+
+    top:18px;
+
+    left:18px;
+
+    width:240px;
+
+    background:rgba(255,255,255,0.94);
+
+    border-radius:30px;
+
+    padding:20px;
+
+    text-align:center;
+
+    box-shadow:
+    0 0 20px rgba(0,0,0,0.18),
+    0 0 40px rgba(77,166,255,0.35);
+
+    animation:
+    flotar 3s infinite ease-in-out;
+}
+
+.perfil span,
+.perfil h2{
+    font-size:24px;
+    font-weight:bold;
+    color:#333;
+    margin-bottom:12px;
+    word-break:break-word;
+    text-shadow:1px 1px 2px rgba(255,255,255,0.6);
+}
+
+.perfil img{
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid #4da6ff;
+    background:white;
+    box-shadow:
+    0 0 15px white,
+    0 0 30px #4da6ff,
+    0 0 50px rgba(77,166,255,0.3);
 }
 
 
@@ -153,6 +203,47 @@ body{
     0 0 50px rgba(77,166,255,0.5);
 
     animation:aparecer 1s ease;
+}
+
+.recuadros{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+    margin-top:35px;
+}
+
+button{
+
+    padding:18px 35px;
+
+    border:none;
+
+    border-radius:20px;
+
+    background:#ffcc00;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    margin:10px;
+
+    transition:0.3s;
+
+    box-shadow:
+    0 0 15px rgba(0,0,0,0.2);
+
+    animation:latido 2s infinite;
 }
 
 
@@ -337,9 +428,9 @@ img:hover{
 
 .caja{
 
-    width:170px;
+    width:150px;
 
-    min-height:240px;
+    min-height:220px;
 
     background:white;
 
@@ -523,23 +614,26 @@ button:hover{
 
 @media(max-width:768px){
 
+    .overlay{
+        padding:12px;
+    }
+
+    .zonaJuego{
+        padding:20px;
+    }
+
     .titulo{
-        font-size:50px;
+        font-size:48px;
     }
 
     .subtitulo h2{
-        font-size:30px;
+        font-size:28px;
     }
 
     .vocal{
         width:90px;
         height:90px;
         font-size:40px;
-    }
-
-    img{
-        width:120px;
-        height:120px;
     }
 
     button{

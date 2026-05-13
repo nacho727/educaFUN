@@ -9,16 +9,20 @@ document.getElementById("avatar").src = "img/" + avatar;
 
 // voz
 function activarVoz(){
+    if (!window.speechSynthesis) return;
 
     speechSynthesis.cancel();
 
     let msg = new SpeechSynthesisUtterance(
-    "Bienvenido " + nombre);
-
+        "Bienvenido " + nombre);
     msg.lang = "es-ES";
 
     speechSynthesis.speak(msg);
 }
+
+window.addEventListener("load", function(){
+    activarVoz();
+});
 
 // ir a aprender
 function irAprender(){
