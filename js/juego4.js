@@ -10,6 +10,10 @@ let msg = new SpeechSynthesisUtterance(texto);
 
 msg.lang = "es-ES";
 
+msg.rate = 1.0;
+
+msg.pitch = 1.0;
+
 speechSynthesis.speak(msg);
 }
 
@@ -48,52 +52,101 @@ hablar(
 }
 
 
-// CONFETTI
-function confetti(){
+// =========================
+// CONFETTI REALISTA
+// =========================
 
-for(let i=0; i<200; i++){
+function crearConfetti(x,y){
 
-let c = document.createElement("div");
+for(let i=0; i<220; i++){
 
-c.style.position = "fixed";
+let confeti = document.createElement("div");
 
-c.style.width = "12px";
+confeti.className = "confeti";
 
-c.style.height = "12px";
+confeti.style.left = x + "px";
 
-c.style.borderRadius = "50%";
+confeti.style.top = y + "px";
 
-c.style.left = Math.random()*100 + "vw";
-
-c.style.top = "-20px";
-
-c.style.background =
+confeti.style.background =
 `hsl(${Math.random()*360},100%,50%)`;
 
-document.body.appendChild(c);
+confeti.style.width =
+(Math.random()*12 + 6) + "px";
 
-let animacion = c.animate([
+confeti.style.height =
+(Math.random()*12 + 6) + "px";
+
+document.body.appendChild(confeti);
+
+let destinoX =
+(Math.random()-0.5) * 900;
+
+let destinoY =
+(Math.random()*900) + 300;
+
+let rotacion =
+Math.random()*1080;
+
+let duracion =
+Math.random()*2500 + 2500;
+
+confeti.animate([
 
 {
-transform:"translateY(0px)"
+transform:
+`translate(0px,0px) rotate(0deg)`,
+
+opacity:1
 },
 
 {
 transform:
-`translateY(${window.innerHeight}px)`
+`translate(${destinoX}px, ${destinoY}px)
+rotate(${rotacion}deg)`,
+
+opacity:0
 }
 
 ],{
 
-duration:4000
+duration:duracion,
+
+easing:"cubic-bezier(0.1,0.8,0.2,1)",
+
+iterations:1
 
 });
 
-animacion.onfinish = ()=>{
+setTimeout(()=>{
 
-c.remove();
-};
+confeti.remove();
+
+},duracion);
+
 }
+}
+
+
+// =========================
+// CONFETTI DESDE BOTON
+// =========================
+
+function confettiBoton(){
+
+let boton =
+document.querySelector(".botones button");
+
+let rect =
+boton.getBoundingClientRect();
+
+let x =
+rect.left + rect.width/2;
+
+let y =
+rect.top + rect.height/2;
+
+crearConfetti(x,y);
 }
 
 
@@ -116,21 +169,30 @@ function verificar(){
 if(respuesta == "O"){
 
 hablar(
-"Excelente"
+"¡Excelente! Todas correctas"
 );
 
-confetti();
+confettiBoton();
+
+setTimeout(()=>{
+
+crearConfetti(
+window.innerWidth/2,
+100
+);
+
+},500);
 
 document.getElementById(
 "resultado"
 ).innerHTML = `
 
-<div class="resultado"
-style="color:lime;">
+<div class="resultado exito">
 🏆 PERFECTO
 </div>
 
-<button onclick="
+<button class="siguiente"
+onclick="
 window.location.href='juego5.html'
 ">
 Siguiente Juego
@@ -147,8 +209,7 @@ document.getElementById(
 "resultado"
 ).innerHTML = `
 
-<div class="resultado"
-style="color:red;">
+<div class="resultado error">
 ❌ Incorrecto
 </div>
 `;

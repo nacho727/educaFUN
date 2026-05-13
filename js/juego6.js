@@ -19,9 +19,9 @@ let msg = new SpeechSynthesisUtterance(texto);
 
 msg.lang = "es-ES";
 
-msg.rate = 0.9;
+msg.rate = 1.0;
 
-msg.pitch = 1.1;
+msg.pitch = 1.0;
 
 speechSynthesis.speak(msg);
 }
@@ -33,7 +33,7 @@ speechSynthesis.speak(msg);
 
 function crearConfetti(x,y){
 
-for(let i=0; i<250; i++){
+for(let i=0; i<220; i++){
 
 let confeti = document.createElement("div");
 
@@ -209,7 +209,7 @@ function verificar(){
 if(correctas == 3 && errores == 0){
 
 hablar(
-"Excelente"
+"¡Excelente! Todas correctas"
 );
 
 confettiBoton();

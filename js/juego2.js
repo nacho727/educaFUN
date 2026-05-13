@@ -15,9 +15,9 @@ new SpeechSynthesisUtterance(texto);
 
 msg.lang = "es-ES";
 
-msg.rate = 0.9;
+msg.rate = 1.0;
 
-msg.pitch = 1.1;
+msg.pitch = 1.0;
 
 speechSynthesis.speak(msg);
 }
@@ -206,7 +206,7 @@ seleccionadas.filter(v=>v==true).length;
 if(buenas == 2 && malas == 0){
 
 hablar(
-"Excelente"
+"¡Excelente! Todas correctas"
 );
 
 confettiBoton();

@@ -13,9 +13,9 @@ let msg = new SpeechSynthesisUtterance(texto);
 
 msg.lang = "es-ES";
 
-msg.rate = 0.9;
+msg.rate = 1.0;
 
-msg.pitch = 1.2;
+msg.pitch = 1.0;
 
 speechSynthesis.speak(msg);
 }
@@ -235,7 +235,7 @@ malas++;
 if(malas == 0){
 
 hablar(
-"Excelente. Todas correctas"
+"¡Excelente! Todas correctas"
 );
 
 confettiBoton();
